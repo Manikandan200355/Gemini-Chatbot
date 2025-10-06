@@ -3,7 +3,7 @@ import google.generativeai as genai
 
 st.title("Welcome to Gemini Chat")
 
-genai.configure(api_key="AIzaSyAxY2JX6XvbHQLW6s1AIyHf3jFbf8FEJ34")
+genai.configure(api_key="")
 
 text = st.text_input("Enter Your Question")
 
@@ -12,4 +12,5 @@ chat = model.start_chat(history=[])
 
 if st.button("Generate"):
     response = chat.send_message(text)
+
     st.write(response.text) 
